@@ -1,6 +1,7 @@
 const AppError = require('../utils/appError');
 const catchAsync = require('../utils/catchAsync');
-const colors = require('../public/js/colors');
+
+const colors = ['red', 'green', 'blue'];
 
 exports.getOverview = catchAsync(async (req, res, next) => {
   // 3) render template using tour data from (1)

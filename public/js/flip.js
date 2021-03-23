@@ -5,15 +5,15 @@ const color = document.getElementById('colorSelect');
 const msgs = document.getElementById('messages');
 const socket = io();
 
-// import ColorFactory from './ColorFactory';
+import ColorFactory from './ColorFactory.js';
 
-// const factory = new ColorFactory();
-// let currentColor;
+const factory = new ColorFactory();
+let currentColor;
 
-// color.addEventListener('change', (e) => {
-//   currentColor = factory.getColor(color.value);
-//   document.body.style.color = currentColor.getColor();
-// });
+color.addEventListener('change', (e) => {
+  currentColor = factory.getColor(color.value);
+  document.body.style.color = currentColor.getColor();
+});
 
 flip.addEventListener('click', (e) => {
   if (n.value.trim().length > 0) {

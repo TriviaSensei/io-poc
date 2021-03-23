@@ -1,3 +1,3 @@
-const colors = ['red', 'blue', 'green'];
+const colorList = ['red', 'blue', 'green'];
 
-module.exports = colors;
+export default colorList;
