@@ -5,9 +5,8 @@ html
         link(rel='stylesheet' href='/css/styles.css')
     body
         select#colorSelect(name='colorSelect') 
-            option(value="red") Red 
-            option(value="blue") Blue 
-            option(value="black") Black
+            each color in colors 
+                option(value=`${color}`)= `${color}`
         table(style='width:100%;')
             tr 
                 td#trigger(style="width:50%;")
