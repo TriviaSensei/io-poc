@@ -1,0 +1,20 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        link(rel='stylesheet' href='/css/styles.css')
+    body
+        select#colorSelect(name='colorSelect') 
+            option(value="red") Red 
+            option(value="blue") Blue 
+            option(value="black") Black
+        table(style='width:100%;')
+            tr 
+                td#trigger(style="width:50%;")
+                    label(for='username') Your name:
+                    input#username(type='text')
+                    button#flip Flip a coin
+                td#log(style="width:50%;height:100%;overflow-y:scroll;")
+                    ul#messages
+        script(src="/socket.io/socket.io.js")
+        script(src='/js/flip.js')
